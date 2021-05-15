@@ -18,7 +18,7 @@ export class CriterionService {
     ));
   }
 
-  compareFunc(a, b){
+  compareFunc(a, b){//Просто сортирую по приоритету типа
     if (a.priority > b.priority) {
       return 1;
     }

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from "./components/login/login.component";
 import {SettingsComponent} from "./components/settings/settings.component";
 import {AuthGuard} from "./core/guards/auth.guard";
+import {TeamsComponent} from "./components/teams/teams.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'teams',
+    component: TeamsComponent,
     canActivate: [AuthGuard]
   }
 

@@ -1,0 +1,14 @@
+<div class="team-setting">
+  <form>
+    <mat-form-field>
+      <mat-label>Название</mat-label>
+      <input type="text" matInput required #fieldName="ngModel" name="name"
+             [(ngModel)]="teamRequest.name">
+    </mat-form-field>
+    <button mat-raised-button (click)="returnRequest()"
+            [disabled]="fieldName.invalid"
+            color="primary">
+      Сохранить
+    </button>
+  </form>
+</div>

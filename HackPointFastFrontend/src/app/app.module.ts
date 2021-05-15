@@ -17,6 +17,8 @@ import {ApiInterceptor} from "./core/interceptors/api.interceptor";
 import {MatTableModule} from "@angular/material/table";
 import { CriterionSettingsComponent } from './components/settings/criterion-settings/criterion-settings.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { TeamsComponent } from './components/teams/teams.component';
+import { TeamSettingsComponent } from './components/teams/team-settings/team-settings.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     LoginComponent,
     SettingsComponent,
     LeftMenuComponent,
-    CriterionSettingsComponent
+    CriterionSettingsComponent,
+    TeamsComponent,
+    TeamSettingsComponent
   ],
   imports: [
     BrowserModule,
