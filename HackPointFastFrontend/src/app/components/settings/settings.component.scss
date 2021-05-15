@@ -1,0 +1,27 @@
+.settings{
+  padding: 40px 20px;
+
+  &__container{
+    max-width: 1150px;
+    margin: auto;
+  }
+}
+
+.settings-group{
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+
+  &__table{
+    width: 100%;
+  }
+}
+
+.mat-column-actions{
+  flex: 0 0 150px!important;
+  width: 150px;
+}

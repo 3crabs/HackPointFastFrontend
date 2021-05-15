@@ -1,0 +1,36 @@
+<div class="login">
+  <div class="login__container">
+    <div class="login__logo">
+      <img src="assets/images/logo.png">
+    </div>
+    <div class="login__form">
+      <div class="login__title">
+        Хацк поинт
+      </div>
+      <form>
+        <mat-form-field>
+          <mat-label>Логин</mat-label>
+          <input type="text" matInput required #loginField="ngModel"
+                 name="login" [(ngModel)]="loginRequest.login">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-error *ngIf="loginField.invalid">Неправильный формат логина</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Пароль</mat-label>
+          <input type="password" [(ngModel)]="loginRequest.password"
+                 name="password" #passwordField="ngModel"
+                 matInput required>
+          <mat-icon matSuffix>lock</mat-icon>
+          <mat-error *ngIf="passwordField.invalid">Введите пароль</mat-error>
+        </mat-form-field>
+
+        <button class="button button__full"
+                (click)="submitForm()"
+                mat-raised-button color="primary">Войти</button>
+      </form>
+    </div>
+  </div>
+  <div class="login__who">
+    Сделано тремя крабами
+  </div>
+</div>

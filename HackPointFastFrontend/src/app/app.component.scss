@@ -1,0 +1,13 @@
+.container {
+  background: #FAFAFA;
+  min-height: 100%;
+}
+
+.container-without-header{
+  min-height: calc(100vh - 77px);
+  display: flex;
+}
+
+.content{
+  flex: 1;
+}
