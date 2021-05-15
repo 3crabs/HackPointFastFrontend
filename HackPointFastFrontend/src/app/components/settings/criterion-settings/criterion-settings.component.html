@@ -10,6 +10,11 @@
       <textarea matInput required #fieldDesc="ngModel" name="desc"
                 [(ngModel)]="criterionRequest.description"></textarea>
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>Приоритет</mat-label>
+      <input matInput required #fieldPriority="ngModel" name="priority"
+             type="number" [(ngModel)]="criterionRequest.priority">
+    </mat-form-field>
     <button mat-raised-button (click)="returnRequest()"
             [disabled]="fieldName.invalid || fieldDesc.invalid"
             color="primary">
