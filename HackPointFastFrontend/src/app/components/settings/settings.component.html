@@ -1,45 +1,34 @@
 <div class="settings">
   <div class="settings__container">
-    <div class="settings__group">
-      <div class="settings-group__header">
-        <div class="settings-group__title">
 
-        </div>
-        <div class="settings-group__add-button">
-          <button mat-raised-button (click)="addCriterion()"
-                  color="primary">
-            <mat-icon>add</mat-icon>
-            Добавить
-          </button>
-        </div>
-      </div>
-      <table mat-table [dataSource]="criterionData" class="settings-group__table">
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Название </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </ng-container>
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="description">
-          <th mat-header-cell *matHeaderCellDef> Описание </th>
-          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-        </ng-container>
-
-        <!-- Weight Column -->
-        <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef>  </th>
-          <td mat-cell *matCellDef="let element">
-            <button mat-icon-button color="primary" (click)="editCriterion(element)">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button color="warn" (click)="deleteCriterion(element)">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </td>
-        </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
+    <div style="text-align: right">
+      <button class="settings-group__add-button" (click)="addCriterion()"
+              mat-raised-button color="primary">
+        <mat-icon>add</mat-icon>
+        Добавить
+      </button>
     </div>
+
+    <table mat-table [dataSource]="criterionData" class="settings-group__table">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Название</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" (click)="editCriterion(element)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteCriterion(element)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
 </div>

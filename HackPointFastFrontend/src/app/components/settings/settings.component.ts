@@ -14,7 +14,7 @@ export class SettingsComponent implements OnInit {
 
   public criterionData: CriterionResponse[] = [];
 
-  public displayedColumns: string[] = ['name', 'description', 'actions'];
+  public displayedColumns: string[] = ['name', 'actions'];
 
   constructor(private criterionService: CriterionService, private dialog: MatDialog) { }
 
