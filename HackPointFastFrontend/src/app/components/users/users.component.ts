@@ -12,7 +12,7 @@ import {mergeMap} from "rxjs/operators";
 })
 export class UsersComponent implements OnInit {
   users: UserResponse[] = [];
-  displayedColumns = ['name', 'surname', 'type', 'actions'];
+  displayedColumns = ['name', 'surname', 'type', 'login', 'actions'];
 
   constructor(private teamService: TeamService, private dialog: MatDialog) {
   }

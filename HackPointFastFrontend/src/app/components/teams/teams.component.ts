@@ -12,7 +12,7 @@ import {mergeMap} from "rxjs/operators";
 })
 export class TeamsComponent implements OnInit {
   teams: TeamResponse[] = [];
-  displayedColumns = ['name', 'actions'];
+  displayedColumns = ['name', 'actions', 'amountReferee', 'amountNotReferee', 'amountAll'];
 
   constructor(private teamService: TeamService, private dialog: MatDialog) { }
 

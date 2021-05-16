@@ -9,6 +9,9 @@ export interface TeamResponse{
   statusFinalPitch: StatusPitchEnum;
   isBlocked: string;
   createdAt: number;
+  amountReferee: number;
+  amountNotReferee: number;
+  amountAll: number;
 }
 
 export enum StatusPitchEnum {
@@ -25,6 +28,9 @@ export class TeamRequest{
   statusFirstPitch: StatusPitchEnum;
   statusSecondPitch: StatusPitchEnum;
   statusFinalPitch: StatusPitchEnum;
+  amountReferee: number;
+  amountNotReferee: number;
+  amountAll: number;
 
   public createFromResponse(team: TeamResponse) {
     this.name = team.name;
@@ -34,5 +40,8 @@ export class TeamRequest{
     this.statusFirstPitch = team.statusFirstPitch;
     this.statusSecondPitch = team.statusSecondPitch;
     this.statusFinalPitch = team.statusFinalPitch;
+    this.amountReferee = team.amountReferee;
+    this.amountNotReferee = team.amountNotReferee;
+    this.amountAll = team.amountAll;
   }
 }

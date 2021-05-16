@@ -14,6 +14,21 @@
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
       </ng-container>
 
+      <ng-container matColumnDef="amountReferee">
+        <th mat-header-cell *matHeaderCellDef> Оценка судей </th>
+        <td mat-cell *matCellDef="let element"> {{element.amountReferee}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="amountNotReferee">
+        <th mat-header-cell *matHeaderCellDef> Оценка экспертов </th>
+        <td mat-cell *matCellDef="let element"> {{element.amountNotReferee}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="amountAll">
+        <th mat-header-cell *matHeaderCellDef> Оценка всех </th>
+        <td mat-cell *matCellDef="let element"> {{element.amountAll}} </td>
+      </ng-container>
+
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>  </th>
         <td mat-cell *matCellDef="let element">
