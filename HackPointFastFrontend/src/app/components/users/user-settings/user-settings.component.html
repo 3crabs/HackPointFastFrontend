@@ -1,0 +1,40 @@
+<div class="user-setting">
+  <form>
+
+    <mat-form-field>
+      <mat-label>Фамилия</mat-label>
+      <input type="text" matInput required #fieldName="ngModel" name="surname"
+             [(ngModel)]="userRequest.surname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Имя</mat-label>
+      <input type="text" matInput required #fieldName="ngModel" name="name"
+             [(ngModel)]="userRequest.name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Тип</mat-label>
+      <input type="text" matInput required #fieldName="ngModel" name="type"
+             [(ngModel)]="userRequest.type">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Логин</mat-label>
+      <input type="text" matInput required #fieldName="ngModel" name="login"
+             [(ngModel)]="userRequest.login">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Пароль</mat-label>
+      <input type="text" matInput required #fieldName="ngModel" name="password"
+             [(ngModel)]="userRequest.password">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="returnRequest()"
+            [disabled]="fieldName.invalid"
+            color="primary">
+      Сохранить
+    </button>
+  </form>
+</div>

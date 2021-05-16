@@ -19,6 +19,8 @@ import { CriterionSettingsComponent } from './components/settings/criterion-sett
 import {MatDialogModule} from "@angular/material/dialog";
 import { TeamsComponent } from './components/teams/teams.component';
 import { TeamSettingsComponent } from './components/teams/team-settings/team-settings.component';
+import {UsersComponent} from "./components/users/users.component";
+import {UserSettingsComponent} from "./components/users/user-settings/user-settings.component";
 
 @NgModule({
   declarations: [
@@ -27,8 +29,10 @@ import { TeamSettingsComponent } from './components/teams/team-settings/team-set
     SettingsComponent,
     LeftMenuComponent,
     CriterionSettingsComponent,
+    UserSettingsComponent,
     TeamsComponent,
-    TeamSettingsComponent
+    TeamSettingsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
