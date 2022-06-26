@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {CreationCriterionRequest, CriterionResponse} from "../models/CriterionModels";
 import {map} from "rxjs/operators";
-import {UserRequest, UserResponse} from "../models/UserModels";
+import {EUserRole, UserRequest, UserResponse} from "../models/UserModels";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,9 @@ export class TeamService {
 
   updateUserById(id: number, request: UserRequest){
     return this.http.put<UserResponse>(`${this.baseUrl}/${id}`, request);
+  }
+
+  updateUserRole(role: EUserRole, userId: number): Observable<boolean> {
+    return this.http.patch<boolean>(`admin/user/${userId}`, {role});
   }
 }

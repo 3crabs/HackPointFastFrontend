@@ -1,0 +1,40 @@
+.users {
+  padding: 2rem;
+}
+
+.status {
+  border-radius: 2px;
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .3px;
+  background-color: #c8e6c9;
+  color: #256029;
+  font-size: 12px;
+
+  &-participant {
+    background-color: #ffcdd2;
+    color: #c63737;
+  }
+
+  &-organizer {
+    background-color: #ffd8b2;
+    color: #805b36;
+  }
+
+  &-referee {
+    background-color: #c8e6c9;
+    color: #256029;
+  }
+
+  &-expert {
+    background-color: #b3e5fc;
+    color: #23547b;
+  }
+
+  &-partner {
+    background-color: #eccfff;
+    color: #694382;
+  }
+}
+

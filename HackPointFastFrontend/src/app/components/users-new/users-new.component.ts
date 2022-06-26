@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute} from "@angular/router";
+import {UserResponse} from "../../core/models/UserModels";
+import {TeamService} from "../../core/services/referee.service";
 
 @Component({
   selector: 'app-users-new',
@@ -8,12 +10,20 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class UsersNewComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  public users: UserResponse[] = [];
+
+  constructor(private activatedRoute: ActivatedRoute, private teamService: TeamService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe((data) => {
-      console.log(data);
-    })
+    this.users = this.activatedRoute.snapshot.data.users;
+    console.log(this.users);
   }
 
+  changeVerified(user: UserResponse, $event: { checked: boolean }): void {
+    if ($event.checked === true) {
+      this.teamService.updateUserRole(user.role, user.id).subscribe((res) => {
+        console.log(res);
+      })
+    }
+  }
 }

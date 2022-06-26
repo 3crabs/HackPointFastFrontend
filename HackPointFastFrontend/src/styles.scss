@@ -31,3 +31,21 @@ body {
   height: 77px;
 }
 
+.p-datatable .p-datatable-tbody > tr {
+  &:nth-child(2n) {
+    background-color: #f4fbff;
+  }
+}
+
+.status-checkbox {
+  .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: #45ef2d;
+    background: #45ef2d;
+
+    &:hover {
+      border-color: #3fe826;
+      background: #3fe826;
+    }
+  }
+}
+

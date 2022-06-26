@@ -22,6 +22,9 @@ import { TeamSettingsComponent } from './components/teams/team-settings/team-set
 import { UsersComponent } from "./components/users/users.component";
 import { UserSettingsComponent } from "./components/users/user-settings/user-settings.component";
 import { UsersNewComponent } from './components/users-new/users-new.component';
+import {CookieService} from "ngx-cookie-service";
+import {TableModule} from "primeng/table";
+import {CheckboxModule} from "primeng/checkbox";
 
 @NgModule({
   declarations: [
@@ -47,7 +50,9 @@ import { UsersNewComponent } from './components/users-new/users-new.component';
     FormsModule,
     HttpClientModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    TableModule,
+    CheckboxModule
   ],
   providers: [
     {
@@ -55,6 +60,7 @@ import { UsersNewComponent } from './components/users-new/users-new.component';
       useClass: ApiInterceptor,
       multi: true,
     },
+    CookieService,
   ],
   bootstrap: [AppComponent]
 })

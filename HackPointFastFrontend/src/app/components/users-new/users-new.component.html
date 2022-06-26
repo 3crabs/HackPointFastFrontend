@@ -1,3 +1,37 @@
 <div class="users">
-
+  <p-table [value]="users">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>№</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Логин</th>
+        <th>Роль</th>
+        <th>Верифицирован</th>
+        <th>Github</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user let-i="rowIndex">
+      <tr>
+        <td>{{ i + 1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.login}}</td>
+        <td>
+          <span [class]="'status status-' + user.role" [ngClass]="''">
+            {{user.role}}
+          </span>
+        </td>
+        <td>
+          <span class="status-checkbox">
+            <p-checkbox [(ngModel)]="user.isVerified"
+                        [disabled]="user.isVerified"
+                        (onChange)="changeVerified(user, $event)"
+                        [binary]="true" inputId="binary"></p-checkbox>
+          </span>
+        </td>
+        <td>{{user.github}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
 </div>
