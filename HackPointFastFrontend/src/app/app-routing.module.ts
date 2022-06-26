@@ -5,6 +5,8 @@ import {SettingsComponent} from "./components/settings/settings.component";
 import {AuthGuard} from "./core/guards/auth.guard";
 import {TeamsComponent} from "./components/teams/teams.component";
 import {UsersComponent} from "./components/users/users.component";
+import {UsersNewComponent} from "./components/users-new/users-new.component";
+import {UsersResolver} from "./core/resolvers/users.resolver";
 
 const routes: Routes = [
   {
@@ -30,6 +32,14 @@ const routes: Routes = [
     path: 'users',
     component: UsersComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'users-new',
+    component: UsersNewComponent,
+    canActivate: [AuthGuard],
+    resolve: {
+      users: UsersResolver,
+    }
   }
 
 ];

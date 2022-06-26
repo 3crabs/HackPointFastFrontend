@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserRequest, UserResponse} from "../../core/models/UserModels";
-import {TeamService} from "../../core/services/user.service";
+import {TeamService} from "../../core/services/referee.service";
 import {MatDialog} from "@angular/material/dialog";
 import {TeamSettingsData, UserSettingsComponent} from "./user-settings/user-settings.component";
 import {mergeMap} from "rxjs/operators";

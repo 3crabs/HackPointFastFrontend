@@ -18,9 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitForm() {
-    this.loginRequest.isMobile = true;
     this.authService.login(this.loginRequest).subscribe((res: SuccessResponse) => {
-      localStorage.setItem('token', res.token)
       this.router.navigateByUrl('/settings');
     }, error => {
       alert('Что то пошло не так!')

@@ -1,7 +1,6 @@
 export class RefereeLoginRequest {
   login: string;
   password: string;
-  isMobile: boolean;
 }
 
 export class SuccessResponse {

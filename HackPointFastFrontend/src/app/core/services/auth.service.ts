@@ -8,7 +8,7 @@ import {RefereeLoginRequest} from "../models/AuthModels";
 export class AuthService {
 
   urls = {
-    login: 'login',
+    login: 'user/login',
     logout: 'logout',
     checkCookie: 'login/check'
   }
@@ -16,6 +16,6 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(request: RefereeLoginRequest) {
-    return this.http.post(this.urls.login, request);
+    return this.http.post(this.urls.login, request,);
   }
 }
